@@ -23,7 +23,7 @@
       <nav>
         <ul class="site-nav list">
           <li class="item">
-            <a href="./index.html" class="link current">Студія</a>
+            <a href="./index.html" class="link current active">Студія</a>
           </li>
           <li class="item">
             <a href="./portfolio.html" class="link">Портфоліо</a>
@@ -55,7 +55,17 @@
     <section class="hero section">
       <div class="container">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="button-primary">Замовити послугу</button>
+        <button type="button" class="button-primary" data-modal-open>Замовити послугу</button>
+      </div>
+      <!-- модальне вікно -->
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="btn-modal-close" data-modal-close>
+            <svg class="icon-close">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -120,13 +130,16 @@
         <ul class="img list">
           <li class="picture">
             <img src="./images/img.jpg" alt="programer-working-his-desk-office" width="370" height="294" />
+            <div class="block-descr-images">Десктопні додатки</div>
           </li>
           <li class="picture">
             <img src="./images/img1.jpg" alt="creators-is-working-interface-mobile-phones" width="370" height="294" />
+            <div class="block-descr-images">Мобільні додатки</div>
           </li>
           <li class="picture">
             <img src="./images/img2.jpg" alt="creative-artist-web-design-with-working-colour-selection-graphic-tablet"
               width="370" height="294" />
+            <div class="block-descr-images">Дизайнерські рішення</div>
           </li>
         </ul>
       </div>
@@ -401,6 +414,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
